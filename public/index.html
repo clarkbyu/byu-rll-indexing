@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="myApp">
+
+<head>
+    <title>RLL Indexing</title>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBnRAxggO7kSNHcqMIwLrZI4phE-R390jI",
+        authDomain: "byu-rll-indexing.firebaseapp.com",
+        databaseURL: "https://byu-rll-indexing.firebaseio.com",
+        projectId: "byu-rll-indexing",
+        storageBucket: "byu-rll-indexing.appspot.com",
+        messagingSenderId: "456237008839"
+      };
+      firebase.initializeApp(config);
+    </script>                       
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+    <!-- AngularFire -->
+    <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <script src="javascripts/script.js"></script>
+</head>
+
+<body>
+    <header class="shadow mb-5">
+        <div class="container pt-3 pb-3 text-center">
+            <a href="/"><img src="/images/full-logo.png" class="img-fluid" id="logo" alt=""></a>
+        </div>
+    </header>   
+    
+    <div ng-controller="indexController" class="container text-center rounded pt-4 pb-3 shadow" id="indexModule">
+        <img class="record-img shadow border border-dark" src="records/n1.JPG">
+        
+        <ul class="mt-4" id="suggestion-list">
+            <li ng-repeat='suggestion in options' id="suggestion">
+                <button class="btn btn-light mb-2 font-weight-bold" ng-model="name" ng-click="update(suggestion.value)" id="suggestion-button">{{suggestion.value}}</button>
+            </li>
+            <li id="suggestion">
+                <form novalidate class="form-inline index-form">
+                    <div class="input-group" id="other-field">
+                        <input class="form-control" ng-model="name" type="text" id="index-value" name="index-value" placeholder="Add other">
+                        <div class="input-group-append">
+                            <button class="input-group-text" ng-click="update(name)" id="other-submit">➥</button>
+                        </div>
+                    </div>
+                </form>
+            </li>
+        </ul>
+            
+    </div>
+    
+    <footer class="footer">
+        <div class="container text-center">
+            <span class="footer-text"> A Project of the <a class="footer-link" target="_blank" href="http://rll.byu.edu">BYU Record Linking Lab</a> | © 2019 All Rights Reserved</span>
+        </div>
+    </footer>
+
+    <!-- BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
