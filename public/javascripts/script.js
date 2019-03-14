@@ -13,8 +13,6 @@ var config = {
 };
 firebase.initializeApp(config);
 
-var size = 20;
-var index = 0;
 var recordsIndexed = 0;
 //var records = prepareUserArray(size);
 
@@ -24,10 +22,12 @@ myApp.controller("indexController", ["$scope", "$firebaseArray",
     function($scope, $firebaseArray) {
         var app_config = firebase.database().ref().child("configuration");
         
-        $scope.size = 20;
+        var sessionID = uniqueID('u');
+        
+        $scope.size = 170;
         
         $scope.records = prepareUserArray($scope.size);
-        $scope.index = 18;
+        $scope.index = 0;
         
         $scope.pageLoad = function() {
             if ($scope.index == $scope.size) {
@@ -48,13 +48,22 @@ myApp.controller("indexController", ["$scope", "$firebaseArray",
         $scope.update = function(name, suggested) {
             console.log(name);
             var record_no = $scope.record_no;
+            recordsIndexed += 1;
+            
             var submissionRef = firebase.database().ref().child("submissions").child(record_no);
             $scope.submissionArray = $firebaseArray(submissionRef);
-            var newSelection = { record: record_no, name: name, suggested: suggested, timestamp: firebase.database.ServerValue.TIMESTAMP, userPlatform: navigator.platform};
+            var newSelection = { 
+                record: record_no,
+                name: name,
+                suggested: suggested,
+                timestamp: firebase.database.ServerValue.TIMESTAMP,
+                session: sessionID,
+                session_total: recordsIndexed,
+                user_platform: navigator.platform
+            };
             
             $scope.submissionArray.$add(newSelection);
             $scope.name = "";
-            recordsIndexed += 1;
             $scope.index += 1;
             $scope.pageLoad();
         };
@@ -92,4 +101,13 @@ function prepareUserArray(size) {
     array = shuffle(array);
     
     return array;
+}
+
+function uniqueID(prefix) {
+    var key = (new Date).getTime().toString(36).substr(1, 6);
+    key += '-' + Math.random().toString(36).substr(3, 6);
+    if(prefix) {
+        return prefix + '-' + key;
+    }
+    return key;
 }

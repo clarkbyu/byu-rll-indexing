@@ -115,3 +115,7 @@ footer {
   -webkit-user-select: none;
   -ms-user-select: none;
 }
+
+.record-img {
+  max-width: 100%;
+}
