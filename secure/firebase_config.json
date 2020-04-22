@@ -1,8 +1,8 @@
 {
-    apiKey: "AIzaSyBnRAxggO7kSNHcqMIwLrZI4phE-R390jI",
-    authDomain: "byu-rll-indexing.firebaseapp.com",
-    databaseURL: "https://byu-rll-indexing.firebaseio.com",
-    projectId: "byu-rll-indexing",
-    storageBucket: "byu-rll-indexing.appspot.com",
-    messagingSenderId: "456237008839"
+    "apiKey": "AIzaSyBnRAxggO7kSNHcqMIwLrZI4phE-R390jI",
+    "authDomain": "byu-rll-indexing.firebaseapp.com",
+    "databaseURL": "https://byu-rll-indexing.firebaseio.com",
+    "projectId": "byu-rll-indexing",
+    "storageBucket": "byu-rll-indexing.appspot.com",
+    "messagingSenderId": "456237008839"
 }

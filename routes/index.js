@@ -5,7 +5,7 @@ var path = require('path');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'RLL Indexing' });
+  res.render('index', { title: 'RLL Indexing Demo' });
 });
 
 /* GET admin page. */
