@@ -23,38 +23,39 @@
 </head>
 
 <body>
-    <header class="shadow mb-4">
+    <header class="shadow">
         <div class="container pt-3 pb-3 text-center">
             <a href="/"><img src="/images/full-logo.png" class="img-fluid" id="logo" alt="BYU RLL Indexing"></a>
-            
         </div>
-    </header>   
-    
-    <div ng-controller="indexController" class="container text-center rounded pt-4 pb-3 shadow" id="indexModule">
-        <img class="record-img shadow border border-dark" ng-src="{{record_img_url}}" id="record-sample">
-        
-        <ul class="mt-4" id="suggestion-list">
-            <li ng-repeat='suggestion in options' id="suggestion">
-                <button class="btn btn-light mb-2 font-weight-bold" ng-model="name" ng-click="update(suggestion.value, true)" id="suggestion-button">{{suggestion.value}}</button>
-            </li>
-            <li id="suggestion">
-                <form novalidate class="form-inline index-form">
-                    <div class="input-group" id="other-field">
-                        <input class="form-control" ng-model="name" type="text" id="index-value" name="index-value" placeholder="Add other">
-                        <div class="input-group-append">
-                            <button class="input-group-text" ng-click="update(name, false)" id="other-submit">➥</button>
-                        </div>
-                    </div>
-                </form>
-            </li>
-        </ul>
+    </header>
+
+    <div class="app">
+        <div ng-controller="indexController" class="container text-center rounded mt-4 pt-4 pb-3 shadow" id="indexModule">
+            <img class="record-img shadow border border-dark" ng-src="{{record_img_url}}" id="record-sample">
             
+            <ul class="mt-4" id="suggestion-list">
+                <li ng-repeat='suggestion in options' id="suggestion">
+                    <button class="btn btn-light mb-2 font-weight-bold" ng-model="name" ng-click="update(suggestion.value, true)" id="suggestion-button">{{suggestion.value}}</button>
+                </li>
+                <li id="suggestion">
+                    <form novalidate class="form-inline index-form">
+                        <div class="input-group" id="other-field">
+                            <input class="form-control" ng-model="name" type="text" id="index-value" name="index-value" placeholder="Add other">
+                            <div class="input-group-append">
+                                <button class="input-group-text" ng-click="update(name, false)" id="other-submit">➥</button>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="container text-center rounded mt-4 mb-4 pt-3 pb-3 shadow" id="linkBox">
+            This web app is just a demo. For the full version of the app, please go <a class="link" href="https://fhss-priceweb.byu.edu/home/record">here</a>.
+        </div>
     </div>
 
-    <div class="container text-center rounded mt-4 pt-3 pb-3 shadow" id="linkBox">
-        This web app is just a demo. For the full version of the app, please go <a class="link" href="https://bit.ly/rll-index">here</a>.
-    </div>
-    
     <footer class="footer">
         <div class="container text-center">
             <span class="footer-text"> A Project of the <a class="footer-link" target="_blank" href="http://rll.byu.edu">BYU Record Linking Lab</a> | © 2020 All Rights Reserved</span>
