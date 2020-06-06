@@ -1,136 +1,138 @@
 html {
-  margin: 0;
-  height: 100%;
+    margin: 0;
+    height: 100%;
 }
+
 
 /* BODY */
 
 body {
-  background-color: white;
-  background-image: url("/images/houndstooth-pattern.png");
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+    background-color: white;
+    background-image: url("/images/houndstooth-pattern.png");
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .app {
-  flex: 1;
-  overflow: auto;
+    flex: 1;
+    overflow: auto;
 }
 
 
 /* HEADER */
 
 header {
-  background-color: #002e5d;
-  color: white;
+    background-color: #002e5d;
+    color: white;
 }
 
 #logo {
-  max-height: 45px;
-  user-drag: none; 
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+    max-height: 45px;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .subheading {
-  font-size: medium;
+    font-size: medium;
 }
 
 
 /* FOOTER */
 
 .footer {
-  width: 100%;
-  padding: 20px;
-  /*height: 60px;
+    width: 100%;
+    padding: 20px;
+    /*height: 60px;
   /* Set the fixed height of the footer here */
-  /*line-height: 60px;*/
-  /* Vertically center the text there */
-  background-color: #002e5d;
+    /*line-height: 60px;*/
+    /* Vertically center the text there */
+    background-color: #002e5d;
 }
 
 .footer-text {
-  color: white;
+    color: white;
 }
 
 .footer-link {
-  color: white;
+    color: white;
 }
 
 .link {
-  color: white;
-  text-decoration: underline;
+    color: white;
+    text-decoration: underline;
 }
 
 .center {
-  margin: auto;
+    margin: auto;
 }
 
 .disabled {
-  cursor: not-allowed;
+    cursor: not-allowed;
 }
 
 #indexModule {
-  background-color: #646566;
-  border-radius: 3px;
-  color: white;
-  max-width: 320px;
+    background-color: #646566;
+    border-radius: 3px;
+    color: white;
+    max-width: 320px;
 }
 
 #linkBox {
-  background-color: #002e5d;
-  border-radius: 3px;
-  color: white;
-  max-width: 320px;
+    background-color: #002e5d;
+    border-radius: 3px;
+    color: white;
+    max-width: 320px;
 }
 
 #suggestion {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 #suggestion-button {
-  width: 200px;
+    width: 200px;
 }
 
 #suggestion-list {
-  padding-left: 0px;
+    padding-left: 0px;
 }
 
 #other-field {
-  max-width: 200px;
+    max-width: 200px;
 }
 
 #index-value {
-  width: 158px;
+    width: 158px;
 }
 
 .index-form {
-  display: inline-block;
-  margin: auto;
+    display: inline-block;
+    margin: auto;
 }
 
 #other-submit {
-  font-weight: bold;
-  background-color: #e9ecef;
+    font-weight: bold;
+    background-color: #e9ecef;
 }
+
 #other-submit:hover {
-  cursor: pointer;
-  background-color: #D1D4D7;
+    cursor: pointer;
+    background-color: #D1D4D7;
 }
 
 #record-sample {
-  user-drag: none; 
-  user-select: none;
-  -moz-user-select: none;
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
-  -ms-user-select: none;
+    user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 .record-img {
-  max-width: 100%;
+    max-width: 100%;
 }

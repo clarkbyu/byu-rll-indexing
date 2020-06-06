@@ -3,10 +3,10 @@
 
 <head>
     <title>RLL Indexing Demo</title>
-    
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.8.6/firebase-auth.js"></script>
@@ -32,7 +32,7 @@
     <div class="app">
         <div ng-controller="indexController" class="container text-center rounded mt-4 pt-4 pb-3 shadow" id="indexModule">
             <img class="record-img shadow border border-dark" ng-src="{{record_img_url}}" id="record-sample">
-            
+
             <ul class="mt-4" id="suggestion-list">
                 <li ng-repeat='suggestion in options' id="suggestion">
                     <button class="btn btn-light mb-2 font-weight-bold" ng-model="name" ng-click="update(suggestion.value, true)" id="suggestion-button">{{suggestion.value}}</button>
@@ -58,7 +58,8 @@
 
     <footer class="footer">
         <div class="container text-center">
-            <span class="footer-text"> A Project of the <a class="footer-link" target="_blank" href="http://rll.byu.edu">BYU Record Linking Lab</a> | © 2020 All Rights Reserved</span>
+            <span class="footer-text"> A Project of the <a class="footer-link" target="_blank"
+                    href="http://rll.byu.edu">BYU Record Linking Lab</a> | © 2020 All Rights Reserved</span>
         </div>
     </footer>
 
